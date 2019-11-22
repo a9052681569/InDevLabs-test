@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+</head>
+<body>
+    <main class="main">
+        <h1 class="main__title">{{main__title}}</h1>
+        <div class="table">
+            <div class="table__column">
+                <p class="table__column-name table__cell">pair</p>
+                <div class="table__cell" v-for="pair in pairs">{{pair.name}}</div>
+            </div>
+            <div class="table__column">
+                <p class="table__column-name table__cell">bid</p>
+                <div class="table__cell" v-for="pair in pairs">{{pair.bid}}</div>
+            </div>
+            <div class="table__column">
+                <p class="table__column-name table__cell">ask</p>
+                <div class="table__cell" v-for="pair in pairs">{{pair.ask}}</div>
+            </div>
+        </div>
+    </main> 
+    <script type="module" src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>

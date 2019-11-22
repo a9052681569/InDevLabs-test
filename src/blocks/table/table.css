@@ -1,0 +1,9 @@
+@import url(./__cell/table__cell.css);
+@import url(./__column-name/table__column-name.css);
+@import url(./__column/table__column.css);
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 33.3%);
+    background-color: #B6BCBF;
+}
